@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   ft_countdown.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/13 21:38:04 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 21:41:27 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/14 11:55:17 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/14 11:55:18 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		main(int argc, char **argv)
+int		main(void)
 {
-	if (argc != 2)
-		write(1, "a", 1);
-	else
+	char c;
+
+	c = '9';
+	while (c >= '0')
 	{
-		while (*argv[1])
-		{
-			if (*argv[1] == 'a')
-			{
-				write(1, "a", 1);
-				break;
-			}
-			argv[1]++;
-		}
+		write(1, &c, 1);
+		c--;
 	}
 	write(1, "\n", 1);
 	return (0);
